@@ -14,8 +14,6 @@ export const WeatherApp = () =>{
   const [ humedad, setHumedad ] = useState();
 
   const fetchWeather = async (ciudadFetch = 'Lima') => {
-    const url = `api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=62f98e0e7e3d069b0854aacf76692b6c`;
-    
     try {
       const res = await axios.get(`http://api.weatherapi.com/v1/current.json?key=15227df04da9468184f14958213012&q=${ciudadFetch}&aqi=no`);    
         
@@ -32,7 +30,7 @@ export const WeatherApp = () =>{
 
   useEffect(()=>{
     fetchWeather(ciudad);
-  },[ ciudad ])
+  },[ ciudad, fetchWeather ])
 
   const handleCiudad = (e) => {
     setCiudad(option); 
