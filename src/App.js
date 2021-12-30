@@ -30,7 +30,7 @@ export const WeatherApp = () =>{
 
   useEffect(()=>{
     fetchWeather(ciudad);
-  },[ ciudad, fetchWeather ])
+  },[ ciudad ])
 
   const handleCiudad = (e) => {
     setCiudad(option); 
