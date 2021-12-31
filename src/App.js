@@ -173,7 +173,7 @@ export const WeatherApp = () =>{
           onChange={ handleInputChange }
         />
         <button
-          className="btn btn-primary"
+          className={`btn btn-${isDay===IS_DAY ? "warning" : "light"}`}
           onClick={ handleCiudad }
         >
           O
