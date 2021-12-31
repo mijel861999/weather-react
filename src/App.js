@@ -6,7 +6,6 @@ import axios from 'axios';
 import Swal from 'sweetalert2'
 
 const IS_DAY = 1;
-const IS_NIGHT = 0;
 
 export const WeatherApp = () =>{
   
