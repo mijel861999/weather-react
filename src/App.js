@@ -21,7 +21,7 @@ export const WeatherApp = () =>{
   const fetchWeather = async (ciudadFetch = 'Lima') => {
     try {
       const res = await axios.get(`http://api.weatherapi.com/v1/current.json?key=15227df04da9468184f14958213012&q=${ciudadFetch}&aqi=no`);    
-        
+       
       setTemp(res.data.current.temp_c)
       setHumedad(res.data.current.humidity)
       setSensacion(res.data.current.feelslike_c)
@@ -165,7 +165,7 @@ export const WeatherApp = () =>{
         className="input-group"
       >
         <input 
-          autocomplete="off"
+          autoComplete="off"
           type="text" 
           className="form-control"
           name="option"
